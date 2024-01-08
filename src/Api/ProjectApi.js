@@ -17,6 +17,8 @@ const ProjectApi = [
         ProjectName: "Tesla Website",
         ProjectDescription: "Website clone",
         firstImg: "Tesla Web/tesla1.png",
+        githubUrl: "https://github.com/vishal-sawai/tesla-clone",
+        liveUrl: "https://vishal-sawai.github.io/tesla-clone/",
         slides: [
             { url: "/assets/project media/Tesla Web/tesla1.png", title: "tesla1" },
             { url: "/assets/project media/Tesla Web/tesla2.png", title: "tesla2" },

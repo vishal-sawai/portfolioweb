@@ -46,28 +46,48 @@ const Container = styled.div`
    margin: 50px;
    padding: 80px 70px;
    margin-top: 6%;
-   background-color: #F4F6F7;
    border-radius: 10px;
    align-items: center;
+   background-color: #0E2335;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   @media (max-width: 1300px) {
+   flex-direction: column;
+   padding: 40px 10px;
+   margin: 30px 10px;
+   border-radius: 5px;
+  }
 `
 const PInfo = styled.div`
 padding: 30px 20px;
 margin-left: 10px;
 border-radius: 10px;
-background-color: white;
-color: black;
+background-color: #2C3E50;
 width: 40%;
+@media (max-width: 1000px) {
+    width: 95%;
+    padding: 20px 10px;
+    margin-left: 0px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
 `
 const PTitle = styled.div`
 h1{
-   color: red;
+   color: white;
    margin-bottom: 10px;
+   @media (max-width: 1000px) {
+    font-size: 25px;
+  }
 }
 
 `
 const PDescription = styled.div`
 p{
     padding: 0px 15px;
+    @media (max-width: 1000px) {
+    padding: 5px 10px;
+    font-size: 15px;
+  }
 }
 `
 const ProjectLink = styled.div`
@@ -77,6 +97,10 @@ margin: auto;
 margin-top: 30px;
 width: 300px;
 text-align: center;
+@media (max-width: 1000px) {
+    width: 95%;
+    margin-top: 20px;
+  }
 `
 
 const ProjectGitHubLink = styled(Link)`
@@ -91,6 +115,9 @@ transition: 0.5s;
 &:hover{
 color: black;
 }
+@media (max-width: 1000px) {
+    padding: 10px 0px;
+  }
 `
 
 const ProjectLiveLink = styled(Link)`
@@ -102,9 +129,12 @@ border-radius: 5px;
 color: white;
 font-weight: bold;
 transition: 0.5s;
-&:hover{
-color: black;
+    &:hover{
+        color: black;
 }
+@media (max-width: 1000px) {
+    padding: 10px 0px;
+  }
 `
 const OfflineLink = styled.div`
 background-color: skyblue;
@@ -114,6 +144,9 @@ margin-top: 15px;
 border-radius: 5px;
 color: white;
 font-weight: bold;
+@media (max-width: 1000px) {
+    padding: 10px 0px;
+  }
 `
 
 

@@ -46,10 +46,17 @@ align-items: center;
 img{
     height: 500px;
     width: 500px;
+    @media (max-width: 1000px) {
+    width: 100%;
+  }
 }
+@media (max-width: 1000px) {
+    height: 26vh;
+    flex-direction: column;
+  }
 `
 const SliderImg = styled.div`
-height: 100%;
+   height: 100%;
   width: 100%;
 background-image: ${props => `url("${props.$bgImg}")`};
 background-position: center;
@@ -64,11 +71,28 @@ cursor: pointer;
 color: gray;
 border-radius: 50%;
 height: 30px;
+@media (max-width: 1000px) {
+    font-size: 20px;
+    position: absolute;
+    top: 9rem;
+    left: 30px;
+  }
 &:hover{
     color: yellowgreen;
 }
 `
 
-const RightArrow = styled(LeaftArrow)`
-
+const RightArrow = styled.div`
+font-size: 30px;
+margin: 0px 10px;
+cursor: pointer;
+color: gray;
+border-radius: 50%;
+height: 30px;
+@media (max-width: 1000px) {
+    font-size: 20px;
+    position: absolute;
+    top: 9rem;
+    right: 30px;
+  }
 `
