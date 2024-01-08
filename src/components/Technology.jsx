@@ -32,6 +32,9 @@ padding: 0px 50px;
 padding-bottom: 50px;
 align-items: center;
 justify-content: center;
+@media (max-width: 1000px) {
+   padding: 0px 20px;
+  }
 `
 const TechnologyContainer = styled.div`
 display: flex;
@@ -42,6 +45,10 @@ padding-top: 20px;
 padding-bottom: 60px;
 justify-content: center;
 box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+@media (max-width: 1000px) {
+  padding: 0px 0px;
+  padding-bottom: 60px;
+}
 `
 const TechBox = styled.div`
  margin: auto;
@@ -55,5 +62,14 @@ const TechBox = styled.div`
  img{
     height: 60px;
     margin-bottom: 10px;
+    @media (max-width: 1000px) {
+    height: 30px;
+  }
  }
+ @media (max-width: 1000px) {
+   width: 150px;
+   h1{
+    font-size: 20px;
+   }
+}
 `

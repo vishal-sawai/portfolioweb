@@ -4,11 +4,15 @@ import About from './About'
 import Project from './Project'
 import { Link } from 'react-router-dom'
 import Technology from './Technology'
+import Contact from './Contact'
+import Footer from './Footer'
+import ParticleBg from './ParticleBg'
 
 const Home = () => {
     return (
         <Container>
             {/* Home Section */}
+            <ParticleBg />
             <HomeContainer>
                 <HeadingContainer>
                     <Heading>
@@ -18,18 +22,12 @@ const Home = () => {
                     <SocialMediaIcons>
                         <Link to={"https://www.linkedin.com/in/vishal-sawai-5462b9186/"} target="_blank">
                             <img src="/assets/linkedin.svg" alt="linkedin" />
-                            {/* <FaLinkedin className='socialMediaIcon' /> */}
-
                         </Link>
                         <Link to={"https://twitter.com/vishaldnynasha1"} target="_blank">
                             <img style={{ backgroundColor: 'black' }} src="/assets/x.png" alt="x" />
-                            {/* <FaSquareXTwitter className='socialMediaIcon' /> */}
-
                         </Link>
                         <Link to={"https://github.com/Vishal-Sawai"} target="_blank">
                             <img src="/assets/github.svg" alt="github" />
-                            {/* <FaSquareGithub className='socialMediaIcon' /> */}
-
                         </Link>
                     </SocialMediaIcons>
                 </HeadingContainer>
@@ -44,6 +42,12 @@ const Home = () => {
             {/* Technology */}
             <Technology />
 
+            {/* Contact */}
+            <Contact />
+
+            {/* Footer */}
+            <Footer />
+
         </Container>
 
     )
@@ -56,7 +60,8 @@ const Container = styled.div`
  `
 const HomeContainer = styled.div`
  height:100vh;
-background-image: linear-gradient(to top, #080015, #280b28, #4e002e, #720022, #8a0000);
+ z-index: 50;
+ 
  `
 const HeadingContainer = styled.div`
 display: flex;
@@ -84,7 +89,6 @@ display: flex;
 align-self: center;
 margin-top: 40px;
 img{
-    /* display: none; */
     width: 40px;
     height: 40px;
     margin: 5px 15px;

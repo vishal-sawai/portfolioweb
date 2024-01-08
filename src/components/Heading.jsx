@@ -20,6 +20,11 @@ margin: 15px 0px;
     h1{
         letter-spacing: 8px;
         font-weight: 600;
+        @media (max-width: 1000px) {
+           font-size: 20px;
+           letter-spacing: 3px;
+           font-weight: 300;
+}
     }
     hr{
         width: 250px;
@@ -29,5 +34,8 @@ margin: 15px 0px;
         background-color: white;
         margin-top: 10px;
         border-radius: 50px;
+         @media (max-width: 1000px){
+            width: 200px;
+        }
     }
 `

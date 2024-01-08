@@ -28,10 +28,10 @@ const ProjectInfo = () => {
                     </PDescription>
                     <ProjectLink>
                         {project.githubUrl ? <ProjectGitHubLink to={project.githubUrl} target='blank'>View Source Code <FaGithub style={{ margin: "0px 0px -5px 6px", fontSize: "25px" }} />
-                        </ProjectGitHubLink> : <ProjectGitHubLink> Source Code Is Private<RiGitRepositoryPrivateFill style={{ margin: "0px 0px -5px 6px", fontSize: "25px" }} /></ProjectGitHubLink>}
+                        </ProjectGitHubLink> : <OfflineLink> Source Code Is Private<RiGitRepositoryPrivateFill style={{ margin: "0px 0px -5px 6px", fontSize: "25px" }} /></OfflineLink>}
 
                         {project.liveUrl ? <ProjectLiveLink to={project.liveUrl} target='blank'>Live Preview<VscPreview style={{ margin: "0px 0px -8px 10px", fontSize: "25px" }} />
-                        </ProjectLiveLink> : <ProjectLiveLink>Live Preview Not Available</ProjectLiveLink>}
+                        </ProjectLiveLink> : <OfflineLink>Live Preview Not Available</OfflineLink>}
                     </ProjectLink>
                 </PInfo>
             </Container>
@@ -105,6 +105,15 @@ transition: 0.5s;
 &:hover{
 color: black;
 }
+`
+const OfflineLink = styled.div`
+background-color: skyblue;
+text-decoration: none;
+padding: 15px 0px;
+margin-top: 15px;
+border-radius: 5px;
+color: white;
+font-weight: bold;
 `
 
 
