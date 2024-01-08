@@ -12,25 +12,27 @@ const Home = () => {
     return (
         <Container>
             {/* Home Section */}
-            <ParticleBg />
             <HomeContainer>
-                <HeadingContainer>
-                    <Heading>
-                        <h1>Hello, I'm <span style={{ color: '#DFFF00' }}>Vishal Sawai</span></h1>
-                        <p style={{ paddingTop: "10px " }}>I'm a <span style={{ backgroundColor: 'red', padding: '0px 10px', borderRadius: '2px' }}>full stack web developer</span></p>
-                    </Heading>
-                    <SocialMediaIcons>
-                        <Link to={"https://www.linkedin.com/in/vishal-sawai-5462b9186/"} target="_blank">
-                            <img src="/assets/linkedin.svg" alt="linkedin" />
-                        </Link>
-                        <Link to={"https://twitter.com/vishaldnynasha1"} target="_blank">
-                            <img style={{ backgroundColor: 'black' }} src="/assets/x.png" alt="x" />
-                        </Link>
-                        <Link to={"https://github.com/Vishal-Sawai"} target="_blank">
-                            <img src="/assets/github.svg" alt="github" />
-                        </Link>
-                    </SocialMediaIcons>
-                </HeadingContainer>
+                <ParticleBg style={{ position: 'absolute', zIndex: '9' }} >
+                    <HeadingContainer style={{ position: 'relative', zIndex: '10' }}>
+                        <Heading>
+                            <h1>Hello, I'm <span style={{ color: '#DFFF00' }}>Vishal Sawai</span></h1>
+                            <p style={{ paddingTop: "10px " }}>I'm a <span style={{ backgroundColor: 'red', padding: '0px 10px', borderRadius: '2px' }}>full stack web developer</span></p>
+                        </Heading>
+
+                        <SocialMediaIcons>
+                            <Link to={"https://www.linkedin.com/in/vishal-sawai-5462b9186/"} target="_blank">
+                                <img src="/assets/linkedin.svg" alt="linkedin" />
+                            </Link>
+                            <Link to={"https://twitter.com/vishaldnynasha1"} target="_blank">
+                                <img style={{ backgroundColor: 'black' }} src="/assets/x.png" alt="x" />
+                            </Link>
+                            <Link to={"https://github.com/Vishal-Sawai"} target="_blank">
+                                <img src="/assets/github.svg" alt="github" />
+                            </Link>
+                        </SocialMediaIcons>
+                    </HeadingContainer>
+                </ParticleBg>
             </HomeContainer>
 
             {/* About Section */}

@@ -10,6 +10,8 @@ const ProjectApi = [
             { url: "/assets/project media/JobFinder/jobfinder1.png", title: "tesla1" },
 
         ],
+        Type: "Mobile App",
+        TechStack: "React Native || Rapid Api || Firebase"
 
     },
     {
@@ -31,6 +33,8 @@ const ProjectApi = [
             { url: "/assets/project media/Tesla Web/tesla9.png", title: "tesla9" },
             { url: "/assets/project media/Tesla Web/tesla10.png", title: "tesla10" },
         ],
+        Type: "WebApp",
+        TechStack: "React js || Redux"
     },
     {
         Id: 3,

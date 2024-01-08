@@ -7,36 +7,55 @@ import { RiGitRepositoryPrivateFill } from "react-icons/ri";
 import { VscPreview } from "react-icons/vsc";
 import { useParams } from 'react-router-dom';
 import ProjectApi from '../Api/ProjectApi';
+import { CiMobile3 } from "react-icons/ci";
+import { TbWorldWww } from "react-icons/tb";
+import { FaCode } from "react-icons/fa6";
+
 
 const ProjectInfo = () => {
 
-    const { PName } = useParams();
-    const project = ProjectApi.find(p => p.ProjectName === PName);
+  const { PName } = useParams();
+  const project = ProjectApi.find(p => p.ProjectName === PName);
 
-    return (
-        <>
-            <Container>
-                <ImageSlider slides={project.slides} />
-                <PInfo>
-                    <PTitle>
-                        <h1>{PName}</h1>
-                    </PTitle>
-                    <PDescription>
-                        <p>
-                            {project.ProjectDescription}
-                        </p>
-                    </PDescription>
-                    <ProjectLink>
-                        {project.githubUrl ? <ProjectGitHubLink to={project.githubUrl} target='blank'>View Source Code <FaGithub style={{ margin: "0px 0px -5px 6px", fontSize: "25px" }} />
-                        </ProjectGitHubLink> : <OfflineLink> Source Code Is Private<RiGitRepositoryPrivateFill style={{ margin: "0px 0px -5px 6px", fontSize: "25px" }} /></OfflineLink>}
+  return (
+    <>
+      <Container>
+        <ImageSlider slides={project.slides} />
+        <PInfo>
+          <PTitle>
+            <h1>{PName}</h1>
+          </PTitle>
+          {project.Type === "Mobile App" ? (
+            <TypeDomain>
+              <CiMobile3 style={{ fontSize: "25px", color: "#F4D03F" }} />
+              <h3>{project.Type}</h3>
+            </TypeDomain>
+          ) : (
+            <TypeDomain>
+              <TbWorldWww style={{ fontSize: "25px", color: "#F4D03F" }} />
+              <h3>{project.Type}</h3>
+            </TypeDomain>
+          )}
+          <TechStack>
+            <FaCode style={{ fontSize: "25px", color: "#A2C4FF" }} />
+            <p>{project.TechStack}</p>
+          </TechStack>
+          <PDescription>
+            <p>
+              {project.ProjectDescription}
+            </p>
+          </PDescription>
+          <ProjectLink>
+            {project.githubUrl ? <ProjectGitHubLink to={project.githubUrl} target='blank'>View Source Code <FaGithub style={{ margin: "0px 0px -5px 6px", fontSize: "25px" }} />
+            </ProjectGitHubLink> : <OfflineLink> Source Code Is Private<RiGitRepositoryPrivateFill style={{ margin: "0px 0px -5px 6px", fontSize: "25px" }} /></OfflineLink>}
 
-                        {project.liveUrl ? <ProjectLiveLink to={project.liveUrl} target='blank'>Live Preview<VscPreview style={{ margin: "0px 0px -8px 10px", fontSize: "25px" }} />
-                        </ProjectLiveLink> : <OfflineLink>Live Preview Not Available</OfflineLink>}
-                    </ProjectLink>
-                </PInfo>
-            </Container>
-        </>
-    )
+            {project.liveUrl ? <ProjectLiveLink to={project.liveUrl} target='blank'>Live Preview<VscPreview style={{ margin: "0px 0px -8px 10px", fontSize: "25px" }} />
+            </ProjectLiveLink> : <OfflineLink>Live Preview Not Available</OfflineLink>}
+          </ProjectLink>
+        </PInfo>
+      </Container>
+    </>
+  )
 }
 
 export default ProjectInfo
@@ -81,6 +100,26 @@ h1{
 }
 
 `
+const TypeDomain = styled.div`
+display: flex;
+padding-bottom: 10px;
+h3{
+    color: #F4D03F;
+    font-size: 20px;
+    margin-left: 5px;
+}
+`
+const TechStack = styled.div`
+display: flex;
+padding-bottom: 10px;
+p{
+  color:#A2C4FF;
+    font-size: 20px;
+    margin-left: 5px;
+}
+}
+`
+
 const PDescription = styled.div`
 p{
     padding: 0px 15px;

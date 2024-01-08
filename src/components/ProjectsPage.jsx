@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { CiMobile3 } from "react-icons/ci";
+import { TbWorldWww } from "react-icons/tb";
 
 const ProjectsPage = (props) => {
     return (
@@ -10,6 +12,17 @@ const ProjectsPage = (props) => {
                 <ProjectInfo>
                     <div>
                         <h2>{props.name}</h2>
+                        {props.Type === "Mobile App" ? (
+                            <TypeDomain>
+                                <CiMobile3 style={{ fontSize: "35px", color: "#F4D03F" }} />
+                                <h3>{props.Type}</h3>
+                            </TypeDomain>
+                        ) : (
+                            <TypeDomain>
+                                <TbWorldWww style={{ fontSize: "35px", color: "#F4D03F" }} />
+                                <h3>{props.Type}</h3>
+                            </TypeDomain>
+                        )}
                         <ProjectInfoLink to={{ pathname: `/projectinfopage/${props.name}` }}>Learn More</ProjectInfoLink>
                     </div>
                 </ProjectInfo>
@@ -33,12 +46,26 @@ background-color: #FDFEFE;
 color: #2C3E50;
 transition: .5s ease;
 margin: auto;
-div{
+div:nth-child(1){
     text-align: center;
     margin-top: 15%;
+    padding: 0px 5px;
 }
 h2{
-    margin: 25px 0px;
+    margin: 10px 0px;
+}
+`
+const TypeDomain = styled.div`
+display: flex;
+margin: auto;
+justify-content: center;
+padding-bottom: 25px;
+padding-top: 10px;
+h3{
+    color: skyblue;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-left: 5px;
 }
 `
 

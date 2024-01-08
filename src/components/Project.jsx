@@ -20,6 +20,7 @@ const Project = () => {
                         <ProjectsPage
                             name={ProApi.ProjectName}
                             firstImg={ProApi.firstImg}
+                            Type={ProApi.Type}
                         />
                     )
                 })}
