@@ -7,32 +7,37 @@ import Technology from './Technology'
 import Contact from './Contact'
 import Footer from './Footer'
 import ParticleBg from './ParticleBg'
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
+
 
 const Home = () => {
+    const [text] = useTypewriter({
+        words: ['Full stack Web Developer', 'React Native Developer', 'Tech Enthusiast'],
+        loop: {},
+    })
     return (
         <Container>
             {/* Home Section */}
+            <ParticleBg />
             <HomeContainer>
-                <ParticleBg style={{ position: 'absolute', zIndex: '9' }} >
-                    <HeadingContainer style={{ position: 'relative', zIndex: '10' }}>
-                        <Heading>
-                            <h1>Hello, I'm <span style={{ color: '#DFFF00' }}>Vishal Sawai</span></h1>
-                            <p style={{ paddingTop: "10px " }}>I'm a <span style={{ backgroundColor: 'red', padding: '0px 10px', borderRadius: '2px' }}>full stack web developer</span></p>
-                        </Heading>
+                <HeadingContainer>
+                    <Heading>
+                        <h1>Hello, I'm <span>Vishal Sawai</span></h1>
+                        <p>I'm a <span>{text}</span><span><Cursor /></span></p>
+                    </Heading>
 
-                        <SocialMediaIcons>
-                            <Link to={"https://www.linkedin.com/in/vishal-sawai-5462b9186/"} target="_blank">
-                                <img src="/assets/linkedin.svg" alt="linkedin" />
-                            </Link>
-                            <Link to={"https://twitter.com/vishaldnynasha1"} target="_blank">
-                                <img style={{ backgroundColor: 'black' }} src="/assets/x.png" alt="x" />
-                            </Link>
-                            <Link to={"https://github.com/Vishal-Sawai"} target="_blank">
-                                <img src="/assets/github.svg" alt="github" />
-                            </Link>
-                        </SocialMediaIcons>
-                    </HeadingContainer>
-                </ParticleBg>
+                    <SocialMediaIcons>
+                        <Link to={"https://www.linkedin.com/in/vishal-sawai-5462b9186/"} target="_blank">
+                            <img src="/assets/linkedin.svg" alt="linkedin" />
+                        </Link>
+                        <Link to={"https://twitter.com/vishaldnynasha1"} target="_blank">
+                            <img src="/assets/x.png" alt="x" />
+                        </Link>
+                        <Link to={"https://github.com/Vishal-Sawai"} target="_blank">
+                            <img src="/assets/github.svg" alt="github" />
+                        </Link>
+                    </SocialMediaIcons>
+                </HeadingContainer>
             </HomeContainer>
 
             {/* About Section */}
@@ -50,7 +55,7 @@ const Home = () => {
             {/* Footer */}
             <Footer />
 
-        </Container>
+        </Container >
 
     )
 }
@@ -61,11 +66,14 @@ const Container = styled.div`
       /* height:100vh; */
  `
 const HomeContainer = styled.div`
- height:100vh;
- z-index: 50;
- 
+ /* height:100vh; */
+ width: 100%;
+ position: absolute;
+ top: 35%;
+ display: flex;
  `
 const HeadingContainer = styled.div`
+margin: auto;
 display: flex;
 flex-direction: column;
  `
@@ -81,23 +89,37 @@ const Heading = styled.div`
     margin-left: auto;
     margin-right: auto;
     color: #fafafa;
-    font-weight: 600;
-    margin-top: 18%;
-    font-size: 30px;
     text-transform: capitalize;
+    h1{
+        font-weight: 100;
+        font-size:50px;
+        span{
+            font-weight: bold;
+        }
+    }
+    p{
+        margin-top: 15px;
+        font-size: 25px;
+        span:nth-child(1){
+            color: yellow;
+            font-weight: bold;
+            padding-left: 5px;
+            text-transform: uppercase;
+        }
+    }
 `
 const SocialMediaIcons = styled.div`
 display: flex;
 align-self: center;
-margin-top: 40px;
+margin-top: 15px;
 img{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     margin: 5px 15px;
     cursor: pointer;
-    background-color: white;
-    border-radius: 10%;
-    padding: 5px;
+    background-color: #0E2335;
+    border-radius: 5px;
+    padding: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     transition: 0.5s;
 }
