@@ -13,7 +13,7 @@ const About = () => {
                     </AbImg>
                     <AbInfo>
                         <p>
-                            <span style={{ color: 'yellow', fontWeight: "bolder" }}>&emsp;&emsp;&emsp; Hello, I'm Vishal Sawai! </span>  I have a lot of fun creating interesting things, exploring new ideas, and learning new skills.
+                            <span style={{ color: 'yellow', fontWeight: "bolder" }}>&emsp;&emsp;&emsp; Hello, I'm Vishal Sawai ! </span>  I have a lot of fun creating interesting things, exploring new ideas, and learning new skills.
                             I'm a quick learner and enjoy the process of figuring out solutions to challenges.<br />
                             I get a real kick out of solving problems and facing challenges. It's like a puzzle, and finding the right solution is pretty thrilling. I truly enjoy what I do because it's not just about writing code;
                             it's about making things work in creative and functional ways.
@@ -72,6 +72,7 @@ p{
     
     @media (max-width: 1000px) {
    font-size: 15px;
+   line-height: 25px;
 }
 @media (max-width: 1000px) {
    padding: 10px;
