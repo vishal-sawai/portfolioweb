@@ -28,9 +28,9 @@ const Contact = () => {
 export default Contact
 
 const Container = styled.div`
-padding: 50px 50px 0px 50px;
+padding: 80px 50px 0px 50px;
 @media (max-width: 1000px) {
-   padding: 20px 20px 20px 20px;
+   padding: 80px 20px 20px 20px;
 }
 `
 const ContactContainer = styled.div`

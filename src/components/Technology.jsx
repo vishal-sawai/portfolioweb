@@ -28,12 +28,12 @@ const Technology = () => {
 export default Technology;
 
 const Container = styled.div`
-padding: 0px 50px;
-padding-bottom: 50px;
+padding-top: 80px;
 align-items: center;
 justify-content: center;
 @media (max-width: 1000px) {
    padding: 0px 20px;
+   padding-top: 80px;
   }
 `
 const TechnologyContainer = styled.div`
@@ -58,7 +58,7 @@ const TechBox = styled.div`
  padding: 20px 0px;
  border-radius: 10px;
  background-color: #0E2335;
- cursor: pointer;
+ /* cursor: pointer; */
  img{
     height: 60px;
     margin-bottom: 10px;
@@ -66,6 +66,7 @@ const TechBox = styled.div`
     height: 30px;
   }
  }
+
  @media (max-width: 1000px) {
    width: 150px;
    h1{

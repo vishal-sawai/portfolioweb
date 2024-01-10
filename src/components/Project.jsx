@@ -33,7 +33,8 @@ const Project = () => {
 export default Project
 
 const Container = styled.div`
-padding: 100px 50px;
+padding: 0px 50px;
+padding-top: 80px;
 align-items: center;
 justify-content: center;
 @media (max-width: 1000px) {

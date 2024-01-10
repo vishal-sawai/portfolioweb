@@ -13,11 +13,10 @@ const About = () => {
                     </AbImg>
                     <AbInfo>
                         <p>
-                            <span style={{ color: 'yellow', fontWeight: "bolder" }}>Hey, I'm Vishal Sawai,</span> a tech enthusiast who loves building things on the internet.
-                            I'm good at making websites look cool using React, HTML, CSS, Bootstrap, and Tailwind CSS.
-                            For the behind-the-scenes stuff, I use PHP, Python, and SQL. I also play around with Java and JavaScript.
-                            When it comes to mobile apps,
-                            I dabble in React Native. I'm always learning new things, and I like to practice by working on projects.
+                            <span style={{ color: 'yellow', fontWeight: "bolder" }}>&emsp;&emsp;&emsp; Hello, I'm Vishal Sawai! </span>  I have a lot of fun creating interesting things, exploring new ideas, and learning new skills.
+                            I'm a quick learner and enjoy the process of figuring out solutions to challenges.<br />
+                            I get a real kick out of solving problems and facing challenges. It's like a puzzle, and finding the right solution is pretty thrilling. I truly enjoy what I do because it's not just about writing code;
+                            it's about making things work in creative and functional ways.
                         </p>
                     </AbInfo>
                 </AboutContainer>
@@ -30,6 +29,7 @@ export default About
 
 const Container = styled.div`
 padding: 20px;
+padding-top: 80px;
 `
 const AboutContainer = styled.div`
 display: flex;
@@ -68,7 +68,8 @@ padding: 10px 20px;
 p{
     font-size: 20px;
     word-spacing: 3px;
-    text-transform: capitalize;
+    line-height: 30px;
+    
     @media (max-width: 1000px) {
    font-size: 15px;
 }

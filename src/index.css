@@ -9,6 +9,17 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Nav Bar */
+@media (max-width: 1000px) {
+    .HideNav {
+        display: none !important;
+    }
+
+    .showNav {
+        display: block !important;
+    }
+}
+
 /* Scroll Bar */
 
 /* width */
@@ -34,13 +45,10 @@ body {
 }
 
 
-/* #ParticleJs {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+#Home {
     height: 100vh;
 }
 
 canvas {
-  
-} */
+    height: 100vh !important;
+}
