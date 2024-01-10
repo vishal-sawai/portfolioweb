@@ -16,11 +16,11 @@ const Navbar = () => {
             <Container>
                 <Menu onClick={() => setMobileMenu(MobileMenu => !MobileMenu)} />
                 <Nav className={MobileMenu ? "ShowNav" : "HideNav"}>
-                    <NavLink to="#Home">Home</NavLink>
-                    <NavLink to="#About">About</NavLink>
-                    <NavLink to="#Projects">Projects</NavLink>
-                    <NavLink to="#Technology">Technology</NavLink>
-                    <NavLink to="#Contact">Contact</NavLink>
+                    <NavLink to="#Home" activeClassName="active">Home</NavLink>
+                    <NavLink to="#About" activeClassName="active">About</NavLink>
+                    <NavLink to="#Projects" activeClassName="active">Projects</NavLink>
+                    <NavLink to="#Technology" activeClassName="active">Technology</NavLink>
+                    <NavLink to="#Contact" activeClassName="active">Contact</NavLink>
                 </Nav>
             </Container>
         </>
@@ -69,6 +69,9 @@ transition: 0.5s;
 &:hover{
     color: white;
 }
+&.active {
+    color: red !important; 
+  }
 @media (max-width: 1000px) {
   margin: 0px 0px;
   color: white;

@@ -13,7 +13,7 @@ const About = () => {
                     </AbImg>
                     <AbInfo>
                         <p>
-                            <span style={{ color: 'yellow', fontWeight: "bolder" }}>&emsp;&emsp;&emsp; Hello, I'm Vishal Sawai ! </span>  I have a lot of fun creating interesting things, exploring new ideas, and learning new skills.
+                            <span style={{ color: '#F4D03F' }}>&emsp;&emsp;&emsp; Hello, I'm Vishal Sawai! </span>  I have a lot of fun creating interesting things, exploring new ideas, and learning new skills.
                             I'm a quick learner and enjoy the process of figuring out solutions to challenges.<br />
                             I get a real kick out of solving problems and facing challenges. It's like a puzzle, and finding the right solution is pretty thrilling. I truly enjoy what I do because it's not just about writing code;
                             it's about making things work in creative and functional ways.
@@ -52,7 +52,9 @@ const AbImg = styled.div`
 padding: 10px 20px;
 img{
     border-radius: 50%;
+    border: 5px solid #85929E;
     height: 350px;
+    padding: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     @media (max-width: 1000px) {
     height: 250px;
