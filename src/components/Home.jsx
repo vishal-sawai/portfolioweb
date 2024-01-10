@@ -1,14 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import About from './About'
-import Project from './Project'
-import { Link } from 'react-router-dom'
-import Technology from './Technology'
-import Contact from './Contact'
-import Footer from './Footer'
+import React from "react";
 import ParticleBg from './ParticleBg'
+import { Link } from 'react-router-dom'
+import styled from "styled-components";
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
-
 
 const Home = () => {
     const [text] = useTypewriter({
@@ -16,9 +10,7 @@ const Home = () => {
         loop: {},
     })
     return (
-        <Container>
-            {/* Home Section */}
-            <ParticleBg />
+        <>
             <HomeContainer>
                 <HeadingContainer>
                     <Heading>
@@ -39,38 +31,27 @@ const Home = () => {
                     </SocialMediaIcons>
                 </HeadingContainer>
             </HomeContainer>
+        </>
+    );
+}
 
-            {/* About Section */}
-            <About />
-
-            {/* Project Section */}
-            <Project />
-
-            {/* Technology */}
-            <Technology />
-
-            {/* Contact */}
-            <Contact />
-
-            {/* Footer */}
-            <Footer />
-
-        </Container >
-
+const Wrapper = () => {
+    return (
+        <><ParticleBg /><Home /></>
     )
 }
 
-export default Home
+export default Wrapper;
 
-const Container = styled.div`
-      /* height:100vh; */
- `
 const HomeContainer = styled.div`
- /* height:100vh; */
- width: 100%;
  position: absolute;
- top: 35%;
- display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media (max-width: 1073px) {
+    width: 90%;
+    top: 50%;
+  }
  `
 const HeadingContainer = styled.div`
 margin: auto;
@@ -90,9 +71,13 @@ const Heading = styled.div`
     margin-right: auto;
     color: #fafafa;
     text-transform: capitalize;
+    text-align: center;
     h1{
         font-weight: 100;
         font-size:50px;
+        @media (max-width: 1073px) {
+            font-size: 25px;
+      }
         span{
             font-weight: bold;
         }
@@ -100,6 +85,9 @@ const Heading = styled.div`
     p{
         margin-top: 15px;
         font-size: 25px;
+        @media (max-width: 1073px) {
+            font-size: 20px;
+      }
         span:nth-child(1){
             color: yellow;
             font-weight: bold;
@@ -112,6 +100,9 @@ const SocialMediaIcons = styled.div`
 display: flex;
 align-self: center;
 margin-top: 15px;
+@media (max-width: 1073px) {
+            margin-top: 20px;
+      }
 img{
     width: 30px;
     height: 30px;
@@ -122,6 +113,11 @@ img{
     padding: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     transition: 0.5s;
+    @media (max-width: 1073px) {
+           width: 25px;
+           height: 25px;
+           margin: 5px 8px;
+      }
 }
     :hover{
        opacity: 60%;

@@ -7,7 +7,7 @@ const Technology = () => {
     const [Skill] = useState(TechStackApi);
     return (
         <>
-            <Container>
+            <Container id='Technology'>
                 <Heading name="Technology" />
                 <TechnologyContainer>
                     {Skill.map((tech) => {

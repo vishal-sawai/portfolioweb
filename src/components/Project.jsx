@@ -11,7 +11,7 @@ const Project = () => {
 
     return (
 
-        <Container>
+        <Container id='Projects'>
             <Heading name="Projects" />
             <ProjectContainer>
 

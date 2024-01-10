@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Contact = () => {
     return (
         <>
-            <Container>
+            <Container id='Contact'>
                 <Heading name="Contact" />
                 <ContactContainer>
                     <CForm>

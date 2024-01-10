@@ -5,7 +5,7 @@ import Heading from './Heading'
 const About = () => {
     return (
         <>
-            <Container>
+            <Container id='About'>
                 <Heading name="About" />
                 <AboutContainer>
                     <AbImg>

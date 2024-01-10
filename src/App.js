@@ -1,6 +1,6 @@
 import './App.css';
 import './index.css';
-import Home from './components/Home';
+import Main from './components/Main';
 import {
   Routes,
   Route,
@@ -12,8 +12,8 @@ function App() {
     <>
 
       <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route path='/home' element={<Home />} />
+        <Route exact path='/' element={<Main />} />
+        <Route path='/home' element={<Main />} />
         <Route path='/projectinfopage/:PName' element={<ProjectInfo />} />
 
       </Routes>
