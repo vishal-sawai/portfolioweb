@@ -22,13 +22,18 @@ const ImageSlider = ({ slides }) => {
     return (
         <>
             <Container>
-                <LeaftArrow>
-                    <FaCircleChevronLeft onClick={goToPrevious} />
-                </LeaftArrow>
-                <SliderImg $bgImg={slides[currentIndex].url} />
-                <RightArrow>
-                    <FaCircleChevronRight onClick={goToNext} />
-                </RightArrow>
+                <SliderContainer>
+                    <LeaftArrow>
+                        <FaCircleChevronLeft onClick={goToPrevious} />
+                    </LeaftArrow>
+                    <SliderImg $bgImg={slides[currentIndex].url} />
+                    <RightArrow>
+                        <FaCircleChevronRight onClick={goToNext} />
+                    </RightArrow>
+                </SliderContainer>
+                <Title>
+                    {slides[currentIndex].title}
+                </Title>
             </Container>
         </>
     )
@@ -37,6 +42,13 @@ const ImageSlider = ({ slides }) => {
 export default ImageSlider
 
 const Container = styled.div`
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+const SliderContainer = styled.div`
 /* width: 2500px;
 height: 300px; */
 height: 52vh;
@@ -55,10 +67,24 @@ img{
     flex-direction: column;
   }
 `
+const Title = styled.p`
+margin-top: 15px;
+text-align: center;
+width: 88%;
+padding: 15px 0px;
+border-radius: 5px;
+background-color: #2c3e50a8;
+@media (max-width: 1000px){
+    width: 100%;
+    margin-top: 5px;
+}
+
+`
+
 const SliderImg = styled.div`
 border: 3px solid white;
 padding: 5px;
-height: 100%;
+height: 100%; 
 width: 100%;
 background-image: ${props => `url("${props.$bgImg}")`};
 background-position: center;

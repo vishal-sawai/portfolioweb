@@ -58,7 +58,6 @@ const TechBox = styled.div`
  padding: 20px 0px;
  border-radius: 10px;
  background-color: #0E2335;
- /* cursor: pointer; */
  img{
     height: 60px;
     margin-bottom: 10px;
