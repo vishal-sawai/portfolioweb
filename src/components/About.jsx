@@ -52,9 +52,9 @@ const AbImg = styled.div`
 padding: 10px 20px;
 img{
     border-radius: 50%;
-    border: 5px solid #85929E;
+    background: linear-gradient(to right, red, yellow,blue);
     height: 350px;
-    padding: 10px;
+    padding: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     @media (max-width: 1000px) {
     height: 250px;

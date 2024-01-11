@@ -76,6 +76,8 @@ margin: auto;
 margin-top: 50px;
 cursor: pointer;
 position: relative; 
+background: linear-gradient(to right, red, white);
+padding: 3px;
 border-radius: 10px;
 &:hover ${ProjectInfo}{
         height: 100%;
@@ -88,7 +90,7 @@ background-image: ${props => `url("/assets/project media/${props.bgImg}")`};
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
-border-radius: 10px;
+border-radius: 5px;
 `
 const ProjectInfoLink = styled(Link)`
   text-decoration: none;
