@@ -56,13 +56,15 @@ img{
   }
 `
 const SliderImg = styled.div`
-   height: 100%;
-  width: 100%;
+border: 3px solid white;
+padding: 5px;
+height: 100%;
+width: 100%;
 background-image: ${props => `url("${props.$bgImg}")`};
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
-border-radius: 5px;
+border-radius: 10px;
 `
 const LeaftArrow = styled.div`
 font-size: 30px;

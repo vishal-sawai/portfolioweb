@@ -2,12 +2,15 @@ const ProjectApi = [
     {
         Id: 1,
         ProjectName: "JobFinder",
-        ProjectDescription: "This is job finder application made up using react native technology",
-        firstImg: "JobFinder/jobfinder1.png",
+        ProjectDescription: "JobFindr mobile application, It aims to simplify the job search process and provide valuable job information to users. The app integrates with the Jsearch API from Rapid API to fetch job listings from various sources.",
+        firstImg: "JobFinder/jobfinder1.jpg",
         githubUrl: "https://github.com/vishal-sawai/JobFinder",
         liveUrl: "",
         slides: [
-            { url: "/assets/project media/JobFinder/jobfinder1.png", title: "tesla1" },
+            { url: "/assets/project media/JobFinder/jobfinder1.jpg", title: "JobFinder" },
+            { url: "/assets/project media/JobFinder/jobfinder2.jpg", title: "JobFinder" },
+            { url: "/assets/project media/JobFinder/jobfinder3.jpg", title: "JobFinder" },
+            { url: "/assets/project media/JobFinder/jobfinder4.jpg", title: "JobFinder" },
 
         ],
         Type: "Mobile App",
@@ -17,7 +20,7 @@ const ProjectApi = [
     {
         Id: 2,
         ProjectName: "Tesla Website",
-        ProjectDescription: "Website clone",
+        ProjectDescription: "Tesla Website clone",
         firstImg: "Tesla Web/tesla1.png",
         githubUrl: "https://github.com/vishal-sawai/tesla-clone",
         liveUrl: "https://vishal-sawai.github.io/tesla-clone/",
@@ -38,9 +41,27 @@ const ProjectApi = [
     },
     {
         Id: 3,
-        ProjectName: "t",
-        ProjectDescription: "Website clone",
-        firstImg: "Tesla Web/tesla1.png",
+        ProjectName: "Helping Hand",
+        ProjectDescription: "Helping hand is a fundraising web platform is an online platform that connects individuals and organizations with potential donors to raise funds for various causes, such as charitable donations, medical expenses, educational expenses, and more. ",
+        firstImg: "Helping Hand/1.png",
+        githubUrl: "https://github.com/vishal-sawai/tesla-clone",
+        liveUrl: "https://vishal-sawai.github.io/tesla-clone/",
+        slides: [
+            { url: "/assets/project media/Helping Hand/1.png", title: "Helping Hand1" },
+            { url: "/assets/project media/Helping Hand/2.png", title: "Helping Hand2" },
+            { url: "/assets/project media/Helping Hand/3.png", title: "Helping Hand3" },
+            { url: "/assets/project media/Helping Hand/4.png", title: "Helping Hand4" },
+            { url: "/assets/project media/Helping Hand/5.png", title: "Helping Hand5" },
+            { url: "/assets/project media/Helping Hand/6.png", title: "Helping Hand6" },
+            { url: "/assets/project media/Helping Hand/7.png", title: "Helping Hand7" },
+            { url: "/assets/project media/Helping Hand/8.png", title: "Helping Hand8" },
+            { url: "/assets/project media/Helping Hand/9.png", title: "Helping Hand9" },
+            { url: "/assets/project media/Helping Hand/10.png", title: "Helping Hand10" },
+            { url: "/assets/project media/Helping Hand/11.png", title: "Helping Hand11" },
+            { url: "/assets/project media/Helping Hand/12.png", title: "Helping Hand12" },
+        ],
+        Type: "WebApp",
+        TechStack: "Tailwind CSS || Django || MySql || Razor Pay"
     },
     {
         Id: 4,

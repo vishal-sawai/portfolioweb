@@ -117,7 +117,6 @@ p{
     font-size: 20px;
     margin-left: 5px;
 }
-}
 `
 
 const PDescription = styled.div`
