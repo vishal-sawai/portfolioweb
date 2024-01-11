@@ -8,13 +8,13 @@ const ProjectApi = [
         liveUrl: "",
         slides: [
             { url: "/assets/project media/JobFinder/jobfinder1.jpg", title: "JobFinder" },
-            { url: "/assets/project media/JobFinder/jobfinder2.jpg", title: "JobFinder" },
-            { url: "/assets/project media/JobFinder/jobfinder3.jpg", title: "JobFinder" },
-            { url: "/assets/project media/JobFinder/jobfinder4.jpg", title: "JobFinder" },
+            { url: "/assets/project media/JobFinder/jobfinder2.jpg", title: "Sign In | Welcome | Sign Up" },
+            { url: "/assets/project media/JobFinder/jobfinder3.jpg", title: "Menu | Profile | Saved Jobs" },
+            { url: "/assets/project media/JobFinder/jobfinder4.jpg", title: "Home | Search | Job Details" },
 
         ],
         Type: "Mobile App",
-        TechStack: "React Native || Rapid Api || Firebase"
+        TechStack: "React Native | Rapid Api | Firebase"
 
     },
     {
@@ -25,19 +25,19 @@ const ProjectApi = [
         githubUrl: "https://github.com/vishal-sawai/tesla-clone",
         liveUrl: "https://vishal-sawai.github.io/tesla-clone/",
         slides: [
-            { url: "/assets/project media/Tesla Web/tesla1.png", title: "tesla1" },
-            { url: "/assets/project media/Tesla Web/tesla2.png", title: "tesla2" },
-            { url: "/assets/project media/Tesla Web/tesla3.png", title: "tesla3" },
-            { url: "/assets/project media/Tesla Web/tesla4.png", title: "tesla4" },
-            { url: "/assets/project media/Tesla Web/tesla5.png", title: "tesla5" },
-            { url: "/assets/project media/Tesla Web/tesla6.png", title: "tesla6" },
-            { url: "/assets/project media/Tesla Web/tesla7.png", title: "tesla7" },
-            { url: "/assets/project media/Tesla Web/tesla8.png", title: "tesla8" },
-            { url: "/assets/project media/Tesla Web/tesla9.png", title: "tesla9" },
-            { url: "/assets/project media/Tesla Web/tesla10.png", title: "tesla10" },
+            { url: "/assets/project media/Tesla Web/tesla1.png", title: "Home" },
+            { url: "/assets/project media/Tesla Web/tesla2.png", title: "Model 3" },
+            { url: "/assets/project media/Tesla Web/tesla3.png", title: "Model Y" },
+            { url: "/assets/project media/Tesla Web/tesla4.png", title: "Model S" },
+            { url: "/assets/project media/Tesla Web/tesla5.png", title: "Model X" },
+            { url: "/assets/project media/Tesla Web/tesla6.png", title: "Solar panels" },
+            { url: "/assets/project media/Tesla Web/tesla7.png", title: "Solar Roof" },
+            { url: "/assets/project media/Tesla Web/tesla8.png", title: "Powerwall" },
+            { url: "/assets/project media/Tesla Web/tesla9.png", title: "Accessories" },
+            { url: "/assets/project media/Tesla Web/tesla10.png", title: "Menu" },
         ],
         Type: "WebApp",
-        TechStack: "React js || Redux || CSS"
+        TechStack: "React js | Redux | CSS"
     },
     {
         Id: 3,
@@ -47,21 +47,21 @@ const ProjectApi = [
         githubUrl: "https://github.com/vishal-sawai/Fundraising",
         liveUrl: "",
         slides: [
-            { url: "/assets/project media/Helping Hand/1.png", title: "Helping Hand1" },
-            { url: "/assets/project media/Helping Hand/2.png", title: "Helping Hand2" },
-            { url: "/assets/project media/Helping Hand/3.png", title: "Helping Hand3" },
-            { url: "/assets/project media/Helping Hand/4.png", title: "Helping Hand4" },
-            { url: "/assets/project media/Helping Hand/5.png", title: "Helping Hand5" },
-            { url: "/assets/project media/Helping Hand/6.png", title: "Helping Hand6" },
-            { url: "/assets/project media/Helping Hand/7.png", title: "Helping Hand7" },
-            { url: "/assets/project media/Helping Hand/8.png", title: "Helping Hand8" },
-            { url: "/assets/project media/Helping Hand/9.png", title: "Helping Hand9" },
-            { url: "/assets/project media/Helping Hand/10.png", title: "Helping Hand10" },
-            { url: "/assets/project media/Helping Hand/11.png", title: "Helping Hand11" },
-            { url: "/assets/project media/Helping Hand/12.png", title: "Helping Hand12" },
+            { url: "/assets/project media/Helping Hand/1.png", title: "Home" },
+            { url: "/assets/project media/Helping Hand/2.png", title: "Campaign" },
+            { url: "/assets/project media/Helping Hand/3.png", title: "Causes" },
+            { url: "/assets/project media/Helping Hand/4.png", title: "Campaign Request Form" },
+            { url: "/assets/project media/Helping Hand/5.png", title: "Donation Form" },
+            { url: "/assets/project media/Helping Hand/6.png", title: "RazorPay Payment" },
+            { url: "/assets/project media/Helping Hand/7.png", title: "Thank You" },
+            { url: "/assets/project media/Helping Hand/8.png", title: "About Us" },
+            { url: "/assets/project media/Helping Hand/9.png", title: "Admin Login" },
+            { url: "/assets/project media/Helping Hand/10.png", title: "Dashboard" },
+            { url: "/assets/project media/Helping Hand/11.png", title: "Donation" },
+            { url: "/assets/project media/Helping Hand/12.png", title: "Campaingn" },
         ],
         Type: "WebApp",
-        TechStack: "Tailwind CSS || JS || Django || MySql || Razor Pay"
+        TechStack: "Tailwind CSS | JS | Django | MySql | Razor Pay"
     },
     {
         Id: 4,
