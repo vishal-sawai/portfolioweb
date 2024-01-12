@@ -26,7 +26,16 @@ const ImageSlider = ({ slides }) => {
                     <LeaftArrow>
                         <FaCircleChevronLeft onClick={goToPrevious} />
                     </LeaftArrow>
-                    <SliderImg $bgImg={slides[currentIndex].url} />
+                    {/* <SliderImg $bgImg={slides[currentIndex].url} /> */}
+                    {slides[currentIndex].title === "video" ? (
+                        <SliderVideo>
+                            <video controls >
+                                <source src={slides[currentIndex].url} type="video/mp4" />
+                            </video>
+                        </SliderVideo>
+                    ) : (
+                        <SliderImg $bgImg={slides[currentIndex].url} />
+                    )}
                     <RightArrow>
                         <FaCircleChevronRight onClick={goToNext} />
                     </RightArrow>
@@ -92,6 +101,19 @@ background-size: cover;
 background-repeat: no-repeat;
 border-radius: 10px;
 `
+
+const SliderVideo = styled.div`
+ height: 100%; 
+ width: 100%;
+ background-color: white;
+ border-radius:5px;
+ video{
+    width: 100%;
+    height: 100%;
+    border-radius:5px;
+ }
+`
+
 const LeaftArrow = styled.div`
 font-size: 30px;
 margin: 0px 10px;

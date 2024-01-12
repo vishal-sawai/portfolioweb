@@ -14,8 +14,7 @@ const ProjectApi = [
 
         ],
         Type: "Mobile App",
-        TechStack: "React Native | Rapid Api | Firebase"
-
+        TechStack: ["React Native", "Rapid Api", "Firebase"],
     },
     {
         Id: 2,
@@ -25,6 +24,7 @@ const ProjectApi = [
         githubUrl: "https://github.com/vishal-sawai/tesla-clone",
         liveUrl: "https://vishal-sawai.github.io/tesla-clone/",
         slides: [
+            { url: "/assets/project media/Tesla Web/teslaVideo.mp4", title: "video" },
             { url: "/assets/project media/Tesla Web/tesla1.png", title: "Home" },
             { url: "/assets/project media/Tesla Web/tesla2.png", title: "Model 3" },
             { url: "/assets/project media/Tesla Web/tesla3.png", title: "Model Y" },
@@ -37,7 +37,7 @@ const ProjectApi = [
             { url: "/assets/project media/Tesla Web/tesla10.png", title: "Menu" },
         ],
         Type: "WebApp",
-        TechStack: "React js | Redux | CSS"
+        TechStack: ["React Js", "Redux", "CSS"],
     },
     {
         Id: 3,
@@ -61,7 +61,7 @@ const ProjectApi = [
             { url: "/assets/project media/Helping Hand/12.png", title: "Campaingn" },
         ],
         Type: "WebApp",
-        TechStack: "Tailwind CSS | JS | Django | MySql | Razor Pay"
+        TechStack: ["Tailwind CSS", "JS", "Django", "MySql", "Razor Pay"],
     },
     {
         Id: 4,
@@ -85,7 +85,7 @@ const ProjectApi = [
             { url: "/assets/project media/CNMS/12.png", title: "Notes" },
         ],
         Type: "WebApp",
-        TechStack: "Tailwind CSS | JS | JAVA, (JSP/Servlet) | MySql "
+        TechStack: ["Tailwind CSS ", "JS", "JAVA (JSP/Servlet) ", " MySql"],
     },
     {
         Id: 5,
@@ -105,7 +105,7 @@ const ProjectApi = [
             { url: "/assets/project media/Open Code/8.png", title: "Admin Login" },
         ],
         Type: "WebApp",
-        TechStack: "Bootstrap | JS | PHP | MySql "
+        TechStack: ["Bootstrap", " JS", "PHP", "MySql"],
     },
     {
         Id: 6,
@@ -138,7 +138,7 @@ const ProjectApi = [
             { url: "/assets/project media/RJ Hostel/rj21.png", title: "Order Discount" },
         ],
         Type: "WebApp",
-        TechStack: "Bootstrap | JS | PHP | MySql | Razor Pay"
+        TechStack: ["Bootstrap", " JS", "PHP", " MySql", "Razor Pay"],
     }
 
 ];

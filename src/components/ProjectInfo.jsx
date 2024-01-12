@@ -38,7 +38,13 @@ const ProjectInfo = () => {
           )}
           <TechStack>
             <FaCode style={{ fontSize: "25px", color: "#A2C4FF" }} />
-            <p>{project.TechStack}</p>
+            <Tech>
+              {project.TechStack.map(item => {
+                return (
+                  <p>{[item]}</p>
+                )
+              })}
+            </Tech>
           </TechStack>
           <PDescription>
             <p>
@@ -53,7 +59,7 @@ const ProjectInfo = () => {
             </ProjectLiveLink> : <OfflineLink>Live Preview Not Available</OfflineLink>}
           </ProjectLink>
         </PInfo>
-      </Container>
+      </Container >
     </>
   )
 }
@@ -112,10 +118,20 @@ h3{
 const TechStack = styled.div`
 display: flex;
 padding-bottom: 10px;
+`
+const Tech = styled.div`
+display: flex;
+flex-wrap: wrap;
+margin-left: 5px;
 p{
-  color:#A2C4FF;
-    font-size: 20px;
-    margin-left: 5px;
+    color:#A2C4FF;
+    font-size: 15px;
+    margin: 0px 5px;
+    margin-bottom: 8px;
+    background-color: rgba(86, 207, 255, 0.816);
+    padding: 4px 8px;
+    color: white;
+    border-radius: 3px;
 }
 `
 
