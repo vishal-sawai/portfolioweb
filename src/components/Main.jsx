@@ -7,7 +7,6 @@ import Footer from './Footer'
 import Home from './Home';
 import Navbar from './Navbar'
 const Main = () => {
-
     return (
         <>
             {/* Navbar */}
