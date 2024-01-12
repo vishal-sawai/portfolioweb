@@ -8,6 +8,7 @@ const ProjectApi = [
         liveUrl: "",
         slides: [
             { url: "/assets/project media/JobFinder/jobfinder1.jpg", title: "JobFinder" },
+            { url: "/assets/project media/JobFinder/jobFinder.mp4", title: "video" },
             { url: "/assets/project media/JobFinder/jobfinder2.jpg", title: "Sign In | Welcome | Sign Up" },
             { url: "/assets/project media/JobFinder/jobfinder3.jpg", title: "Menu | Profile | Saved Jobs" },
             { url: "/assets/project media/JobFinder/jobfinder4.jpg", title: "Home | Search | Job Details" },
