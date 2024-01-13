@@ -3,13 +3,9 @@ import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
 import { IoMdMenu } from "react-icons/io";
 import { useState } from 'react';
-import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
-
 const Navbar = () => {
-
   const [MobileMenu, setMobileMenu] = useState(false);
-
 
   return (
     <>

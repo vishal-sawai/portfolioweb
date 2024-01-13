@@ -3,13 +3,12 @@ import styled from 'styled-components'
 import Heading from './Heading'
 import ProjectsPage from './ProjectsPage'
 import ProjectApi from '../Api/ProjectApi'
-import { Fade } from 'react-reveal'
+import Fade from 'react-reveal'
 
 const Project = () => {
     const [Project] = useState(ProjectApi);
 
     return (
-
         <Container id='Projects'>
             <Heading name="Projects" />
             <Fade bottom>
