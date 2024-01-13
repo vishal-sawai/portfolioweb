@@ -3,28 +3,31 @@ import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
 import { IoMdMenu } from "react-icons/io";
 import { useState } from 'react';
-
-
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
 
 const Navbar = () => {
 
-    const [MobileMenu, setMobileMenu] = useState(false);
+  const [MobileMenu, setMobileMenu] = useState(false);
 
 
-    return (
-        <>
-            <Container>
-                <Menu onClick={() => setMobileMenu(MobileMenu => !MobileMenu)} />
-                <Nav className={MobileMenu ? "ShowNav" : "HideNav"}>
-                    <NavLink to="#Home" activeClassName="active">Home</NavLink>
-                    <NavLink to="#About" activeClassName="active">About</NavLink>
-                    <NavLink to="#Projects" activeClassName="active">Projects</NavLink>
-                    <NavLink to="#Technology" activeClassName="active">Technology</NavLink>
-                    <NavLink to="#Contact" activeClassName="active">Contact</NavLink>
-                </Nav>
-            </Container>
-        </>
-    )
+  return (
+    <>
+      <Container>
+        <Menu onClick={() => setMobileMenu(MobileMenu => !MobileMenu)} />
+        <Slide down>
+          <Nav className={MobileMenu ? "ShowNav" : "HideNav"}>
+            <NavLink to="#Home">Home</NavLink>
+            <NavLink to="#About">About</NavLink>
+            <NavLink to="#Projects">Projects</NavLink>
+            <NavLink to="#Technology">Technology</NavLink>
+            <NavLink to="#Contact">Contact</NavLink>
+          </Nav>
+        </Slide>
+      </Container>
+
+    </>
+  )
 }
 
 export default Navbar

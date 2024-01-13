@@ -3,6 +3,7 @@ import ParticleBg from './ParticleBg'
 import { Link } from 'react-router-dom'
 import styled from "styled-components";
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import Fade from 'react-reveal/Fade';
 
 const Home = () => {
     const [text] = useTypewriter({
@@ -13,21 +14,28 @@ const Home = () => {
         <>
             <HomeContainer>
                 <HeadingContainer>
-                    <Heading>
-                        <h1>Hello, I'm <span>Vishal Sawai</span></h1>
-                        <p>I'm a <span>{text}</span><span><Cursor /></span></p>
-                    </Heading>
-
+                    <Fade top>
+                        <Heading>
+                            <h1>Hello, I'm <span>Vishal Sawai</span></h1>
+                            <p>I'm a <span>{text}</span><span><Cursor /></span></p>
+                        </Heading>
+                    </Fade>
                     <SocialMediaIcons>
-                        <Link to={"https://www.linkedin.com/in/vishal-sawai-5462b9186/"} target="_blank">
-                            <img src="/assets/linkedin.svg" alt="linkedin" />
-                        </Link>
-                        <Link to={"https://twitter.com/vishaldnynasha1"} target="_blank">
-                            <img src="/assets/x.png" alt="x" />
-                        </Link>
-                        <Link to={"https://github.com/Vishal-Sawai"} target="_blank">
-                            <img src="/assets/github.svg" alt="github" />
-                        </Link>
+                        <Fade right>
+                            <Link to={"https://www.linkedin.com/in/vishal-sawai-5462b9186/"} target="_blank">
+                                <img src="/assets/linkedin.svg" alt="linkedin" />
+                            </Link>
+                        </Fade>
+                        <Fade top>
+                            <Link to={"https://twitter.com/vishaldnynasha1"} target="_blank">
+                                <img src="/assets/x.png" alt="x" />
+                            </Link>
+                        </Fade>
+                        <Fade left>
+                            <Link to={"https://github.com/Vishal-Sawai"} target="_blank">
+                                <img src="/assets/github.svg" alt="github" />
+                            </Link>
+                        </Fade>
                     </SocialMediaIcons>
                 </HeadingContainer>
             </HomeContainer>

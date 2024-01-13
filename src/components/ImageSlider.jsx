@@ -26,7 +26,6 @@ const ImageSlider = ({ slides }) => {
                     <LeaftArrow>
                         <FaCircleChevronLeft onClick={goToPrevious} />
                     </LeaftArrow>
-                    {/* <SliderImg $bgImg={slides[currentIndex].url} /> */}
                     {slides[currentIndex].title === "video" ? (
                         <SliderVideo>
                             <video controls >

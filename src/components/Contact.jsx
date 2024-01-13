@@ -1,25 +1,41 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Heading from './Heading';
 import styled from 'styled-components';
+import { Fade } from 'react-reveal';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_a8e3isv', 'template_czb51np', form.current, 'N6jcqnlBvF8iOeGaK')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
     return (
         <>
             <Container id='Contact'>
                 <Heading name="Contact" />
-                <ContactContainer>
-                    <CForm>
-                        <FormLabel>Name</FormLabel>
-                        <FormInput type="text"></FormInput>
-                        <FormLabel>Email</FormLabel>
-                        <FormInput type="email"></FormInput>
-                        <FormLabel>Phone</FormLabel>
-                        <FormInput type="tel"></FormInput>
-                        <FormLabel>Message</FormLabel>
-                        <FormTextArea></FormTextArea>
-                        <FormButton type="submit">Submit</FormButton>
-                    </CForm>
-                </ContactContainer>
+                <Fade>
+                    <ContactContainer>
+                        <CForm ref={form} onSubmit={sendEmail}>
+                            <FormLabel>Name</FormLabel>
+                            <FormInput type="text" name="user_name" ></FormInput>
+                            <FormLabel>Email</FormLabel>
+                            <FormInput type="email" name="user_mail" ></FormInput>
+                            <FormLabel>Phone</FormLabel>
+                            <FormInput type="tel" name="user_phone"></FormInput>
+                            <FormLabel>Message</FormLabel>
+                            <FormTextArea name="user_message"></FormTextArea>
+                            <FormButton type="submit">Submit</FormButton>
+                        </CForm>
+                    </ContactContainer>
+                </Fade>
             </Container>
         </>
     )
