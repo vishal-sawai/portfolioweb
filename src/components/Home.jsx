@@ -7,7 +7,7 @@ import Fade from 'react-reveal/Fade';
 
 const Home = () => {
     const [text] = useTypewriter({
-        words: ['Full stack Web Developer', 'React Native Developer', 'Tech Enthusiast'],
+        words: ['Full stack Web Developer', 'React Js Developer', 'React Native Developer', 'Tech Enthusiast'],
         loop: {},
     })
     return (

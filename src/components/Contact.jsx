@@ -5,6 +5,7 @@ import { Fade } from 'react-reveal';
 import { useFormik } from 'formik';
 import { contactSchema } from '../schemas';
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
     const form = useRef();
@@ -22,16 +23,32 @@ const Contact = () => {
             validateOnChange: true,
             validateOnBlur: false,
 
-            onSubmit: (values, action) => {
+            onSubmit: (values, actions) => {
                 emailjs.sendForm('service_a8e3isv', 'template_czb51np', form.current, 'N6jcqnlBvF8iOeGaK')
                     .then((result) => {
-                        console.log(result.text);
+                        Success();
+                        actions.resetForm();
                     }, (error) => {
-                        console.log(error.text);
+                        Failure();
                     });
-                action.resetForm();
+
             },
         })
+    const Failure = () => {
+        Swal.fire({
+            title: "Message Failed to Send",
+            text: "There was a problem sending your message. Please try again later.",
+            icon: "error"
+        });
+    }
+
+    const Success = () => {
+        Swal.fire({
+            title: "Message Sent!",
+            text: "Thank you your message has been successfully sent.",
+            icon: "success"
+        });
+    }
 
     return (
         <>
@@ -110,6 +127,7 @@ const FormLabel = styled.label`
 font-size: 20px;
 margin-bottom: 3px;
 margin-left:3px;
+margin-top: 2px;
 @media (max-width: 1000px) {
   font-size: 15px;
 }
