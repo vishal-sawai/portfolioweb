@@ -22,6 +22,7 @@ const Project = () => {
                                 Type={ProApi.Type}
                             />
                         )
+
                     })}
                 </ProjectContainer>
             </Fade>
