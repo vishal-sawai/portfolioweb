@@ -2,36 +2,73 @@ import React, { useRef } from 'react';
 import Heading from './Heading';
 import styled from 'styled-components';
 import { Fade } from 'react-reveal';
+import { useFormik } from 'formik';
+import { contactSchema } from '../schemas';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const form = useRef();
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        emailjs.sendForm('service_a8e3isv', 'template_czb51np', form.current, 'N6jcqnlBvF8iOeGaK')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+    const initialValues = {
+        name: "",
+        mail: "",
+        phone: "",
+        message: "",
     };
+
+    const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
+        useFormik({
+            initialValues,
+            validationSchema: contactSchema,
+            validateOnChange: true,
+            validateOnBlur: false,
+
+            onSubmit: (values, action) => {
+                emailjs.sendForm('service_a8e3isv', 'template_czb51np', form.current, 'N6jcqnlBvF8iOeGaK')
+                    .then((result) => {
+                        console.log(result.text);
+                    }, (error) => {
+                        console.log(error.text);
+                    });
+                action.resetForm();
+            },
+        })
+
     return (
         <>
             <Container id='Contact'>
                 <Heading name="Contact" />
                 <Fade>
                     <ContactContainer>
-                        <CForm ref={form} onSubmit={sendEmail}>
+                        {/* <CForm ref={form} onSubmit={sendEmail}> */}
+                        <CForm ref={form} onSubmit={handleSubmit}>
                             <FormLabel>Name</FormLabel>
-                            <FormInput type="text" name="user_name" ></FormInput>
+                            <FormInput autoComplete='off' type="text" name="name" id='name' value={values.name} onChange={handleChange} onBlur={handleBlur}></FormInput>
+
+                            {touched.name && errors.name ? (
+                                <ErrorMessage>{errors.name}</ErrorMessage>
+                            ) : null}
+
                             <FormLabel>Email</FormLabel>
-                            <FormInput type="email" name="user_mail" ></FormInput>
-                            <FormLabel>Phone</FormLabel>
-                            <FormInput type="tel" name="user_phone"></FormInput>
+                            <FormInput autoComplete='off' type="email" name="mail" id='mail' value={values.mail} onChange={handleChange} onBlur={handleBlur}></FormInput>
+
+                            {touched.mail && errors.mail ? (
+                                <ErrorMessage>{errors.mail}</ErrorMessage>
+                            ) : null}
+
+                            <FormLabel>Phone No</FormLabel>
+                            <FormInput autoComplete='off' type="tel" name="phone" id='phone' value={values.phone} onChange={handleChange} onBlur={handleBlur}></FormInput>
+
+                            {touched.phone && errors.phone ? (
+                                <ErrorMessage>{errors.phone}</ErrorMessage>
+                            ) : null}
+
                             <FormLabel>Message</FormLabel>
-                            <FormTextArea name="user_message"></FormTextArea>
+                            <FormTextArea name="message" id='message' value={values.message} onChange={handleChange} onBlur={handleBlur}></FormTextArea>
+
+                            {touched.message && errors.message ? (
+                                <ErrorMessage>{errors.message}</ErrorMessage>
+                            ) : null}
+
                             <FormButton type="submit">Submit</FormButton>
                         </CForm>
                     </ContactContainer>
@@ -82,7 +119,7 @@ background-color: #0E2335;
 color: white;
 outline: none;
 border: none;
-margin-bottom: 15px;
+margin-bottom: 5px;
 width: 100%;
 height: 45px;
 border-radius: 3px;
@@ -91,12 +128,18 @@ padding:0px 10px;
    width: 95%;
 }
 `
+const ErrorMessage = styled.p`
+margin-bottom: 10px;
+font-size: 15px;
+color: #FF0000;
+`
+
 const FormTextArea = styled.textarea`
 background-color: #0E2335;
 color: white;
 outline: none;
 border: none;
-margin-bottom: 15px;
+margin-bottom: 5px;
 width: 100%;
 height: 80px;
 border-radius: 3px;
@@ -121,6 +164,7 @@ text-transform: uppercase;
 letter-spacing: 5px;
 font-weight: bolder;
 transition: 0.5s;
+margin-top: 10px;
 @media (max-width: 1000px) {
    font-size: 15px;
    font-weight: bold;
