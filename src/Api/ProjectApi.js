@@ -25,7 +25,6 @@ const ProjectApi = [
         githubUrl: "https://github.com/vishal-sawai/tesla-clone",
         liveUrl: "https://vishal-sawai.github.io/tesla-clone/",
         slides: [
-            { url: "/assets/project media/Tesla Web/teslaVideo.mp4", title: "video" },
             { url: "/assets/project media/Tesla Web/tesla1.png", title: "Home" },
             { url: "/assets/project media/Tesla Web/tesla2.png", title: "Model 3" },
             { url: "/assets/project media/Tesla Web/tesla3.png", title: "Model Y" },
@@ -48,6 +47,7 @@ const ProjectApi = [
         githubUrl: "https://github.com/vishal-sawai/Fundraising",
         liveUrl: "",
         slides: [
+            { url: "/assets/project media/Helping Hand/Helping hand.mp4", title: "video" },
             { url: "/assets/project media/Helping Hand/1.png", title: "Home" },
             { url: "/assets/project media/Helping Hand/2.png", title: "Campaign" },
             { url: "/assets/project media/Helping Hand/3.png", title: "Causes" },
@@ -72,6 +72,7 @@ const ProjectApi = [
         githubUrl: "https://github.com/vishal-sawai/CNMSeclispe",
         liveUrl: "",
         slides: [
+            { url: "/assets/project media/CNMS/CNMS.mp4", title: "video" },
             { url: "/assets/project media/CNMS/1.png", title: "Home" },
             { url: "/assets/project media/CNMS/2.png", title: "Course & About" },
             { url: "/assets/project media/CNMS/3.png", title: "Contact Us" },
@@ -96,6 +97,7 @@ const ProjectApi = [
         githubUrl: "",
         liveUrl: "",
         slides: [
+            { url: "/assets/project media/Open Code/open code.mp4", title: "video" },
             { url: "/assets/project media/Open Code/1.png", title: "Home" },
             { url: "/assets/project media/Open Code/2.png", title: "About Us" },
             { url: "/assets/project media/Open Code/3.png", title: "Our Services" },
