@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import Zoom from 'react-reveal/Zoom';
+// import Zoom from 'react-reveal/Zoom';
 
 const Heading = (props) => {
     return (
         <>
-            <Zoom>
-                <Headers>
-                    <h1>{props.name}</h1>
-                    <hr />
-                </Headers>
-            </Zoom>
+            {/* <Zoom> */}
+            <Headers>
+                <h1>{props.name}</h1>
+                <hr />
+            </Headers>
+            {/* </Zoom> */}
         </>
     );
 }
