@@ -10,7 +10,7 @@ const Project = () => {
     return (
         <Container id='Projects'>
             <Heading name="Projects" />
-            <Fade direction='up'>
+            <Fade>
                 <ProjectContainer>
                     {Project.map((ProApi) => {
                         return (

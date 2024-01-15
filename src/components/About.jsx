@@ -9,12 +9,12 @@ const About = () => {
             <Container id='About'>
                 <Heading name="About" />
                 <AboutContainer>
-                    <Fade direction='down'>
+                    <Fade>
                         <AbImg>
                             <img src="/assets/profile.jpg" alt='profile' />
                         </AbImg>
                     </Fade>
-                    <Fade direction='up'>
+                    <Fade>
                         <AbInfo>
                             <p>
                                 <span style={{ color: '#F4D03F' }}>&emsp;&emsp;&emsp; Hello, I'm Vishal Sawai! </span>  I have a lot of fun creating interesting things, exploring new ideas, and learning new skills.
