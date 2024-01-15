@@ -12,7 +12,7 @@ export default function ParticleBg() {
 
     return (
         <div id='Home'>
-            <Particles init={particlesInit} params={ParticleConfig}></Particles>
+            <Particles init={particlesInit} options={ParticleConfig}></Particles>
         </div>
     );
 }
