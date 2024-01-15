@@ -3,6 +3,7 @@ import ParticleBg from './ParticleBg'
 import { Link } from 'react-router-dom'
 import styled from "styled-components";
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import { Fade } from "react-awesome-reveal";
 // import Fade from 'react-reveal/Fade';
 
 const Home = () => {
@@ -14,12 +15,12 @@ const Home = () => {
         <>
             <HomeContainer>
                 <HeadingContainer>
-                    {/* <Fade top> */}
-                    <Heading>
-                        <h1>Hello, I'm <span>Vishal Sawai</span></h1>
-                        <p>I'm a <span>{text}</span><span><Cursor /></span></p>
-                    </Heading>
-                    {/* </Fade> */}
+                    <Fade direction="down">
+                        <Heading>
+                            <h1>Hello, I'm <span>Vishal Sawai</span></h1>
+                            <p>I'm a <span>{text}</span><span><Cursor /></span></p>
+                        </Heading>
+                    </Fade>
                     <SocialMediaIcons>
                         {/* <Fade right> */}
                         <Link to={"https://www.linkedin.com/in/vishal-sawai-5462b9186/"} target="_blank">
