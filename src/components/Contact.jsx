@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 import Heading from './Heading';
 import styled from 'styled-components';
-// import { Fade } from 'react-reveal';
 import { useFormik } from 'formik';
 import { contactSchema } from '../schemas';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
+import { Fade } from 'react-awesome-reveal';
 
 const Contact = () => {
     const form = useRef();
@@ -54,42 +54,41 @@ const Contact = () => {
         <>
             <Container id='Contact'>
                 <Heading name="Contact" />
-                {/* <Fade> */}
-                <ContactContainer>
-                    {/* <CForm ref={form} onSubmit={sendEmail}> */}
-                    <CForm ref={form} onSubmit={handleSubmit}>
-                        <FormLabel>Name</FormLabel>
-                        <FormInput autoComplete='off' type="text" name="name" id='name' value={values.name} onChange={handleChange} onBlur={handleBlur}></FormInput>
+                <Fade>
+                    <ContactContainer>
+                        <CForm ref={form} onSubmit={handleSubmit}>
+                            <FormLabel>Name</FormLabel>
+                            <FormInput autoComplete='off' type="text" name="name" id='name' value={values.name} onChange={handleChange} onBlur={handleBlur}></FormInput>
 
-                        {touched.name && errors.name ? (
-                            <ErrorMessage>{errors.name}</ErrorMessage>
-                        ) : null}
+                            {touched.name && errors.name ? (
+                                <ErrorMessage>{errors.name}</ErrorMessage>
+                            ) : null}
 
-                        <FormLabel>Email</FormLabel>
-                        <FormInput autoComplete='off' type="email" name="mail" id='mail' value={values.mail} onChange={handleChange} onBlur={handleBlur}></FormInput>
+                            <FormLabel>Email</FormLabel>
+                            <FormInput autoComplete='off' type="email" name="mail" id='mail' value={values.mail} onChange={handleChange} onBlur={handleBlur}></FormInput>
 
-                        {touched.mail && errors.mail ? (
-                            <ErrorMessage>{errors.mail}</ErrorMessage>
-                        ) : null}
+                            {touched.mail && errors.mail ? (
+                                <ErrorMessage>{errors.mail}</ErrorMessage>
+                            ) : null}
 
-                        <FormLabel>Phone No</FormLabel>
-                        <FormInput autoComplete='off' type="tel" name="phone" id='phone' value={values.phone} onChange={handleChange} onBlur={handleBlur}></FormInput>
+                            <FormLabel>Phone No</FormLabel>
+                            <FormInput autoComplete='off' type="tel" name="phone" id='phone' value={values.phone} onChange={handleChange} onBlur={handleBlur}></FormInput>
 
-                        {touched.phone && errors.phone ? (
-                            <ErrorMessage>{errors.phone}</ErrorMessage>
-                        ) : null}
+                            {touched.phone && errors.phone ? (
+                                <ErrorMessage>{errors.phone}</ErrorMessage>
+                            ) : null}
 
-                        <FormLabel>Message</FormLabel>
-                        <FormTextArea name="message" id='message' value={values.message} onChange={handleChange} onBlur={handleBlur}></FormTextArea>
+                            <FormLabel>Message</FormLabel>
+                            <FormTextArea name="message" id='message' value={values.message} onChange={handleChange} onBlur={handleBlur}></FormTextArea>
 
-                        {touched.message && errors.message ? (
-                            <ErrorMessage>{errors.message}</ErrorMessage>
-                        ) : null}
+                            {touched.message && errors.message ? (
+                                <ErrorMessage>{errors.message}</ErrorMessage>
+                            ) : null}
 
-                        <FormButton type="submit">Submit</FormButton>
-                    </CForm>
-                </ContactContainer>
-                {/* </Fade> */}
+                            <FormButton type="submit">Submit</FormButton>
+                        </CForm>
+                    </ContactContainer>
+                </Fade>
             </Container>
         </>
     )

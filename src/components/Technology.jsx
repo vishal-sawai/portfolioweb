@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import Heading from './Heading'
 import styled from 'styled-components'
 import TechStackApi from '../Api/TechStackApi'
-// import { Fade } from 'react-reveal'
+import { Fade } from 'react-awesome-reveal'
+
 
 const Technology = () => {
     const [Skill] = useState(TechStackApi);
@@ -15,10 +16,10 @@ const Technology = () => {
                         return (
 
                             <TechBox>
-                                {/* <Fade> */}
-                                <img src={tech.Path} alt="TechStack" />
-                                <h3>{tech.Name}</h3>
-                                {/* </Fade> */}
+                                <Fade>
+                                    <img src={tech.Path} alt="TechStack" />
+                                    <h3>{tech.Name}</h3>
+                                </Fade>
                             </TechBox>
 
                         )

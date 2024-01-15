@@ -3,27 +3,26 @@ import styled from 'styled-components'
 import Heading from './Heading'
 import ProjectsPage from './ProjectsPage'
 import ProjectApi from '../Api/ProjectApi'
-// import Fade from 'react-reveal'
-
+import { Fade } from 'react-awesome-reveal'
 const Project = () => {
     const [Project] = useState(ProjectApi);
 
     return (
         <Container id='Projects'>
             <Heading name="Projects" />
-            {/* <Fade bottom> */}
-            <ProjectContainer>
-                {Project.map((ProApi) => {
-                    return (
-                        <ProjectsPage
-                            name={ProApi.ProjectName}
-                            firstImg={ProApi.firstImg}
-                            Type={ProApi.Type}
-                        />
-                    )
-                })}
-            </ProjectContainer>
-            {/* </Fade> */}
+            <Fade direction='up'>
+                <ProjectContainer>
+                    {Project.map((ProApi) => {
+                        return (
+                            <ProjectsPage
+                                name={ProApi.ProjectName}
+                                firstImg={ProApi.firstImg}
+                                Type={ProApi.Type}
+                            />
+                        )
+                    })}
+                </ProjectContainer>
+            </Fade>
         </Container>
 
     )

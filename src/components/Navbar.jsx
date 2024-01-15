@@ -3,7 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
 import { IoMdMenu } from "react-icons/io";
 import { useState } from 'react';
-// import Slide from 'react-reveal/Slide';
+import { Slide } from 'react-awesome-reveal';
 const Navbar = () => {
   const [MobileMenu, setMobileMenu] = useState(false);
 
@@ -11,15 +11,15 @@ const Navbar = () => {
     <>
       <Container>
         <Menu onClick={() => setMobileMenu(MobileMenu => !MobileMenu)} />
-        {/* <Slide down> */}
-        <Nav className={MobileMenu ? "ShowNav" : "HideNav"}>
-          <NavLink to="#Home">Home</NavLink>
-          <NavLink to="#About">About</NavLink>
-          <NavLink to="#Projects">Projects</NavLink>
-          <NavLink to="#Technology">Technology</NavLink>
-          <NavLink to="#Contact">Contact</NavLink>
-        </Nav>
-        {/* </Slide> */}
+        <Slide direction="down">
+          <Nav className={MobileMenu ? "ShowNav" : "HideNav"}>
+            <NavLink to="#Home">Home</NavLink>
+            <NavLink to="#About">About</NavLink>
+            <NavLink to="#Projects">Projects</NavLink>
+            <NavLink to="#Technology">Technology</NavLink>
+            <NavLink to="#Contact">Contact</NavLink>
+          </Nav>
+        </Slide>
       </Container>
 
     </>
