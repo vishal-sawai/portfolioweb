@@ -1,5 +1,5 @@
 const particlesConfig = {
-    "tsparticles": {
+    "particles": {
         "number": {
             "value": 20,
             "density": {
