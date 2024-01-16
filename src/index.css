@@ -59,6 +59,10 @@ html {
     height: 100vh;
 }
 
+/* #tsparticle {
+    height: 100 !important;
+} */
+
 canvas {
     height: 100vh !important;
 }
