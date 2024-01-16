@@ -57,6 +57,7 @@ margin-right: 50px;
   }
 `
 const NavLink = styled(HashLink)`
+position: relative;
 color: white;
 margin: 0px 10px;
 text-decoration: none;
@@ -64,7 +65,24 @@ text-transform: uppercase;
 font-size: 13px;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 color:#A6ACAF;
-transition: 0.5s;   
+transition: 0.5s; 
+padding:5px !important;
+&:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+&:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}  
 &:hover{
     color: white;
 }

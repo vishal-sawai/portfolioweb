@@ -1,18 +1,18 @@
 import React from 'react'
 import ParticleConfig from './Config/ParticleConfig';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+// import Particles from 'react-tsparticles';
+// import { loadFull } from 'tsparticles';
 
 
 export default function ParticleBg() {
 
-    const particlesInit = (engine) => {
-        loadFull(engine);
-    };
+    // const particlesInit = (engine) => {
+    //     loadFull(engine);
+    // };
 
     return (
         <div id='Home'>
-            <Particles init={particlesInit} options={ParticleConfig}></Particles>
+            {/* <Particles init={particlesInit} options={ParticleConfig}></Particles> */}
         </div>
     );
 }
