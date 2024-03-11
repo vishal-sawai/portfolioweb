@@ -44,7 +44,7 @@ const ProjectApi = [
         ProjectName: "Helping Hand",
         ProjectDescription: "Helping hand is a fundraising web platform is an online platform that connects individuals and organizations with potential donors to raise funds for various causes, such as charitable donations, medical expenses, educational expenses, and more. ",
         firstImg: "Helping Hand/1.png",
-        githubUrl: "https://github.com/vishal-sawai/Fundraising",
+        githubUrl: "",
         liveUrl: "",
         slides: [
             { url: "/assets/project media/Helping Hand/Helping hand.mp4", title: "video" },
