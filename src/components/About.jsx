@@ -57,7 +57,7 @@ const AbImg = styled.div`
 padding: 10px 20px;
 img{
     border-radius: 50%;
-    background: linear-gradient(to right, red, yellow,blue);
+    /* background: linear-gradient(to right, red, yellow,blue); */
     height: 350px;
     padding: 2px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;

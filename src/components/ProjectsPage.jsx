@@ -98,7 +98,7 @@ margin: auto;
 margin-top: 50px;
 cursor: pointer;
 position: relative; 
-background: linear-gradient(to right, red, white,blue);
+/* background: linear-gradient(to right, red, white,blue); */
 padding: 2px;
 border-radius: 10px;
 &:hover ${ProjectInfo}{
