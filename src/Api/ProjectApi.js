@@ -4,7 +4,7 @@ const ProjectApi = [
         ProjectName: "JobFinder",
         ProjectDescription: "JobFindr mobile application, It aims to simplify the job search process and provide valuable job information to users. The app integrates with the Jsearch API from Rapid API to fetch job listings from various sources.",
         firstImg: "JobFinder/jobfinder1.jpg",
-        githubUrl: "https://github.com/vishal-sawai/JobFinder",
+        githubUrl: "",
         liveUrl: "",
         slides: [
             { url: "/assets/project media/JobFinder/jobfinder1.jpg", title: "JobFinder" },
@@ -69,7 +69,7 @@ const ProjectApi = [
         ProjectName: "CNMS",
         ProjectDescription: "College Notes Management System is provide an organized platform for teachers to store, manage, and distribute their class notes to students in an efficient and secure manner.With the CNMS, teachers can upload class notes, slides, and other educational materials, and students can easily access and download the materials. ",
         firstImg: "CNMS/1.png",
-        githubUrl: "https://github.com/vishal-sawai/CNMSeclispe",
+        githubUrl: "",
         liveUrl: "",
         slides: [
             { url: "/assets/project media/CNMS/CNMS.mp4", title: "video" },
