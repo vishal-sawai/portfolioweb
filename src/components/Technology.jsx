@@ -17,7 +17,7 @@ const Technology = () => {
 
                             <TechBox>
                                 <Fade>
-                                    <img src={tech.Path} alt="TechStack" />
+                                    <img src={tech.Path} style={tech.bg ? { backgroundColor: "White", borderRadius: "10px", padding: "5px 10px" } : ""} alt="TechStack" />
                                     <h3>{tech.Name}</h3>
                                 </Fade>
                             </TechBox>

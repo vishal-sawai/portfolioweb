@@ -7,7 +7,7 @@ import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
     const [text] = useTypewriter({
-        words: ['Full stack Web Developer', 'React Js Developer', 'React Native Developer', 'Tech Enthusiast'],
+        words: ['Mern stack Web Developer', 'Tech Enthusiast'],
         loop: {},
     })
     return (
